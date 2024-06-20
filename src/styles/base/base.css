@@ -1,0 +1,57 @@
+:root {
+  --bodyFontSize: 1rem;
+  --transitionAll02sEase: all 0.2s ease;
+
+  --backgroundColor: #fff;
+  --borderColor: rgb(234 234 234);
+  --color: #222222;
+  --color2: #777777;
+}
+
+body {
+  font-family: var(--encodeSans-font), sans-serif;
+  font-size: var(--bodyFontSize);
+  color: var(--color);
+  background-color: var(--backgroundColor);
+  overflow-x: hidden;
+  -webkit-transition: var(--transitionAll02sEase);
+  -ms-transition: var(--transitionAll02sEase);
+  transition: var(--transitionAll02sEase);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  color: var();
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: var(--transitionAll02sEase);
+  -ms-transition: var(--transitionAll02sEase);
+  transition: var(--transitionAll02sEase);
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+svg {
+  stroke-width: 0;
+}
+
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
