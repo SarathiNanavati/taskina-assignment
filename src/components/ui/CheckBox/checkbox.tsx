@@ -24,15 +24,20 @@ const CheckBox = ({
   };
 
   return (
-    <div className={`${s.checkboxContainer}`}>
+    <div
+      className={`${s.checkboxContainer}`}
+      onClick={(e: React.MouseEvent<HTMLDivElement>) => handleClick(value)}
+    >
       <span>{name}</span>
       <div>
-        <input type='checkbox' name={name} value={value} checked={checked} />
-        <label
-          onClick={(e: React.MouseEvent<HTMLLabelElement>) =>
-            handleClick(value)
-          }
-        >
+        <input
+          type='checkbox'
+          name={name}
+          value={value}
+          checked={checked}
+          onChange={(e) => {}}
+        />
+        <label>
           <svg
             width='19'
             height='14'
@@ -43,7 +48,7 @@ const CheckBox = ({
             <path
               d='M1 7.6L7.03451 12.9672C7.05497 12.9854 7.08626 12.9837 7.1047 12.9635L18 1'
               strokeWidth={"1px"}
-              stroke-linecap='round'
+              strokeLinecap='round'
             />
           </svg>
         </label>
